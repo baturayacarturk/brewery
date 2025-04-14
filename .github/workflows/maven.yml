@@ -23,11 +23,11 @@ jobs:
         run: mvn -B clean verify
 
       - name: Build Docker image
-        run: docker build -t beer-service:latest .
+        run: docker build -t brewery-service:latest .
 
       - name: Run Docker container for testing
         run: |
-          docker run -d --name beer-service-test -p 8080:8080 brewery-service:latest
+          docker run -d --name brewery-service-test -p 8080:8080 brewery-service:latest
           sleep 10
           docker ps
           docker logs brewery-service-test
