@@ -1,29 +1,64 @@
-= Brewery Service Docs
+= Brewery Service Documentation
 
 :doctype: book
 :icons: font
 :source-highlighter: highlightjs
+:toc: left
+:toclevels: 3
+:sectlinks:
 
-Sample application demonstrating how to use Spring REST Docs with JUnit 5.
+== Overview
+This documentation describes the Brewery Service API endpoints.
 
-`BeerOrderControllerTest` makes a call to a very simple service and produces three
-documentation snippets.
+== Beer API
 
-One showing how to make a request using cURL:
+=== Get Beer by ID
+This endpoint retrieves a beer by its UUID.
 
-include::{snippets}/orders/curl-request.adoc[]
+==== Curl Request
+include::{snippets}/v1/beer-get/curl-request.adoc[]
 
-One showing the HTTP request:
+==== HTTP Request
+include::{snippets}/v1/beer-get/http-request.adoc[]
 
-include::{snippets}/orders/http-request.adoc[]
+==== HTTP Response
+include::{snippets}/v1/beer-get/http-response.adoc[]
 
-And one showing the HTTP response:
+==== Response Fields
+include::{snippets}/v1/beer-get/response-fields.adoc[]
 
-include::{snippets}/orders/http-response.adoc[]
+==== Path Parameters
+include::{snippets}/v1/beer-get/path-parameters.adoc[]
 
-Response Body:
-include::{snippets}/orders/response-body.adoc[]
+=== Create New Beer
+This endpoint creates a new beer.
 
+==== Curl Request
+include::{snippets}/v1/beer-post/curl-request.adoc[]
 
-Response Fields:
-include::{snippets}/orders/response-fields.adoc[]
+==== HTTP Request
+include::{snippets}/v1/beer-post/http-request.adoc[]
+
+==== Request Fields
+include::{snippets}/v1/beer-post/request-fields.adoc[]
+
+==== HTTP Response
+include::{snippets}/v1/beer-post/http-response.adoc[]
+
+=== Update Beer
+This endpoint updates an existing beer.
+
+==== Curl Request
+include::{snippets}/v1/beer-update/curl-request.adoc[]
+
+==== HTTP Request
+include::{snippets}/v1/beer-update/http-request.adoc[]
+
+==== Path Parameters
+include::{snippets}/v1/beer-update/path-parameters.adoc[]
+
+==== Request Fields
+include::{snippets}/v1/beer-update/request-fields.adoc[]
+
+==== HTTP Response
+include::{snippets}/v1/beer-update/http-response.adoc[]
