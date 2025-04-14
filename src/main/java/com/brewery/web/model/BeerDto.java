@@ -3,6 +3,7 @@ package com.brewery.web.model;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Null;
 import jakarta.validation.constraints.PositiveOrZero;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -20,6 +21,7 @@ public class BeerDto {
     private UUID id;
 
     @NotBlank
+    @Size(min=3, max=100)
     private String beerName;
 
     @NotBlank
